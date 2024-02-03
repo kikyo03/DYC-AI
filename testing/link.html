@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickable Suggestions</title>
+  <style>
+    #chatbox {
+      height: 300px;
+      border: 1px solid #ccc;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    #inputField {
+      margin-top: 10px;
+    }
+
+    .suggestion {
+      cursor: pointer;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chatbox"></div>
+<input type="text" id="inputField" placeholder="Type your message...">
+<br>
+
+<!-- Suggestions -->
+<div class="suggestion" onclick="populateInput('How can I help you?')">Help</div>
+<div class="suggestion" onclick="populateInput('Tell me about your services')">Services</div>
+<div class="suggestion" onclick="populateInput('What are your business hours?')">Business Hours</div>
+
+<script>
+  function populateInput(message) {
+    document.getElementById('inputField').value = message;
+    sendMessage(); // Automatically send the message when a suggestion is clicked
+  }
+
+  document.getElementById('inputField').addEventListener('keyup', function(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  });
+
+  function sendMessage() {
+    var inputField = document.getElementById('inputField');
+    var message = inputField.value;
+
+    // Display the user's message in the chatbox
+    document.getElementById('chatbox').innerHTML += '<div>User: ' + message + '</div>';
+
+    // Clear the input field
+    inputField.value = '';
+
+    // You can add logic here to handle the chatbot's response based on the user's input
+  }
+</script>
+
+</body>
+</html>

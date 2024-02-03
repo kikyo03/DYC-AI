@@ -1,0 +1,29 @@
+/* Updated styles for sidebar */
+.sidebar {
+    width: 40px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar .toggle-sidebar {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar.minimized {
+    width: 0;
+}
