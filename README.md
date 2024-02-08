@@ -40,13 +40,25 @@ $ (venv) python chat.py
 
 Now for deployment follow my tutorial to implement `app.py` and `app.js`.
 
-## Watch the Tutorial
-[![Alt text](https://img.youtube.com/vi/a37BL0stIuM/hqdefault.jpg)](https://youtu.be/a37BL0stIuM)  
-[https://youtu.be/a37BL0stIuM](https://youtu.be/a37BL0stIuM)
+install xampp 
+pip install flask-mysqldb (sa terminal)
+create db (login-flask)
 
-## Note
-In the video we implement the first approach using jinja2 templates within our Flask app. Only slight modifications are needed to run the frontend separately. I put the final frontend code for a standalone frontend application in the [standalone-frontend](/standalone-frontend) folder.
+CREATE TABLE `user` (
+  `userid` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-## Credits:
-This repo was used for the frontend code:
-https://github.com/hitchcliff/front-end-chatjs
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userid`);
+
+INSERT INTO `user` (`userid`, `name`, `email`, `password`) VALUES
+(1, 'Jhon smith', 'smith@webdamn.com', '123'),
+(2, 'Adam William', 'adam@webdamn.com', '123');
+
+
+run app.py
+if wala error gagana yan
+
