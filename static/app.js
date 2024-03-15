@@ -206,15 +206,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         }
 
+        // updateChatText(chatbox) {
+        //     var html = '';
+        //     this.messages.slice().reverse().forEach(function (item) {
+        //         if (item.name === 'DYC-AI') {
+        //             html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>';
+        //         } else {
+        //             html += '<div class="messages__item messages__item--operator">' + item.message + '</div>';
+        //         }
+        //     });
+
         updateChatText(chatbox) {
             var html = '';
             this.messages.slice().reverse().forEach(function (item) {
                 if (item.name === 'DYC-AI') {
-                    html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>';
+                    html += '<div class="messages__item messages__item--visitor">';
+                    html += item.message;
+                    html += '</div>';
                 } else {
-                    html += '<div class="messages__item messages__item--operator">' + item.message + '</div>';
+                    html += '<div class="messages__item messages__item--operator">';
+                    html += item.message;
+                    html += '</div>';
                 }
             });
+        
 
             const chatmessage = chatbox.querySelector('.chatbox__messages');
             chatmessage.innerHTML = html;

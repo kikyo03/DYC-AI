@@ -103,15 +103,6 @@
 
     <div class="chatbox__support">
         <div class="chatbox__messages">
-            <!-- Suggestions -->
-            <!-- <div class="suggestion-container">
-                <div class="suggestion" onclick="chatbox.populateAndSendMessage('Where can I get promissory?', chatbox.args.chatBox)">Promissory</div>
-                <div class="suggestion" onclick="chatbox.populateAndSendMessage('Tell me the requirements in enrollment', chatbox.args.chatBox)">Enrollment</div>
-                <div class="suggestion" onclick="chatbox.populateAndSendMessage('What are your business hours?', chatbox.args.chatBox)">Special Exam</div>
-            </div>
-             -->
-            <div class="chatbox__history"></div>
-            <div class="chatbox__new"></div>
         </div>
         <div class="chatbox__footer">
             <button class="chatbox__add--footer clear__button"><i class='bx bxs-trash-alt' alt="clear"></i></button>
@@ -122,6 +113,10 @@
     </div>
 
 </section>
+
+
+
+
 <script>
     function confirmLogout() {
         if (confirm("Are you sure you want to log out?")) {
@@ -129,6 +124,12 @@
         }
     }
 </script>
+
+
+
+
+
+
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

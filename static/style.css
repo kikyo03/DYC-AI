@@ -552,4 +552,32 @@
         transform: translateY(0);
     }
   }
-  
+
+  /* Chat History Styling */
+
+.chatbox__history {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: calc(100% - 80px); /* Adjust the height as needed */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.message {
+  margin-bottom: 10px; /* Add space between messages */
+  padding: 8px; /* Add padding inside messages */
+  border-radius: 5px; /* Rounded corners for messages */
+}
+
+.user {
+  background-color: #e6f2ff; /* Light blue background for user messages */
+  color: #000; /* Black text color for user messages */
+}
+
+.chatbot {
+  background-color: #f2f2f2; /* Light grey background for chatbot messages */
+  color: #000; /* Black text color for chatbot messages */
+}
+
+.timestamp {
+  font-size: 0.8em; /* Smaller font size for timestamps */
+  color: #888; /* Light grey color for timestamps */
+}
